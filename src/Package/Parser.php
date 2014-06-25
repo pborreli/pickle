@@ -126,8 +126,8 @@ abstract class Parser
     /**
      * @todo If someone prefers a nice regex for both AC_ and PHP_... :)
      *
-     * @param $which
-     * @param $config
+     * @param string $which
+     * @param string $config
      * @return array
      */
     protected function fetchArgAc($which, $config)
@@ -167,8 +167,8 @@ abstract class Parser
     }
 
     /**
-     * @param $which
-     * @param $config
+     * @param string $which
+     * @param string $config
      * @return array
      */
     protected function fetchArg($which, $config)

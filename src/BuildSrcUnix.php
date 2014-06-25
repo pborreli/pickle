@@ -16,6 +16,10 @@ class BuildSrcUnix
         $this->cwd_back = getcwd();
     }
 
+    /**
+     * @param integer $level
+     * @param string $msg
+     */
     public function log($level, $msg)
     {
         $this->log .= $level . ': ' . $msg . "\n";
@@ -248,6 +252,9 @@ class BuildSrcUnix
         chdir($back_cwd);
     }
 
+    /**
+     * @param string $command
+     */
     public function _runCommand($command, $callback = null)
     {
         $this->log(1, 'running: ' . $command);

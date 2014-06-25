@@ -10,6 +10,9 @@ class Dumper extends Package\Dumper
         return json_encode(parent::dump($package), JSON_PRETTY_PRINT);
     }
 
+    /**
+     * @param string $path
+     */
     public function dumpToFile(Package $package, $path)
     {
         file_put_contents($path, $this->dump($package));
